@@ -1,8 +1,13 @@
-import logo from "./logo.svg";
 import "./App.css";
+import ButtonAppBar from "./NavBar";
 
 function App() {
-  return <div></div>;
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
+
+  return <div className="App">
+    <ButtonAppBar/>
+    {isLoggedIn ? <Dashboard/> : <Signup/>}
+  </div>;
 }
 
 export default App;
