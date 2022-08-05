@@ -1,13 +1,14 @@
 import "./App.css";
+import BasicCard from "./LoginCard";
 import ButtonAppBar from "./NavBar";
-import Signup from "./Signup";
+
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+
 
   return <div className="App">
     <ButtonAppBar/>
-    {isLoggedIn ? <Dashboard/> : <Signup/>}
+    <BasicCard/>
   </div>;
 }
 
